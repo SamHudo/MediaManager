@@ -1,4 +1,4 @@
-# MediaManager
+# MediaManager [![Build Status](https://travis-ci.com/NinjaMiellies/MediaManager.svg?branch=master)](https://travis-ci.com/NinjaMiellies/MediaManager) 
 QA Synoptic project completed over a week with a weeks advance prep. This Media Manager organises media in a viewable manner, allows creation of playlists and categorisation. 
 
 # Background information
