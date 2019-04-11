@@ -5,4 +5,4 @@ install:
   - nuget install NUnit.Console -OutputDirectory testrunner
 script:
   - dotnet /p:Configuration=Release MediaManager.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/MediaManager.Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/netcoreapp2.1/MediaManager.Tests.dll
