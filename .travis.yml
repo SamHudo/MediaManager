@@ -1,7 +1,0 @@
-language: csharp
-solution: "./MediaManager.sln"
-install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./MediaManager.sln
-script:
-- xbuild ./MediaManager.sln
-- mono ./MediaManager/packages/xunit.runner.console*/tools/xunit.console.exe ./MediaManager.Tests/bin/Debug/MediaManager.Tests.dll
