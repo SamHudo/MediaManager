@@ -1,7 +1,8 @@
 language: csharp
-solution: "./MediaManager.sln"
+solution: MediaManager.sln
 install:
-- travis_retry nuget restore -source "https://www.nuget.org/api/v2" ./MediaManager.sln
+  - nuget restore MediaManager.sln
+  - nuget install NUnit.Console -Version 3.10.1 -OutputDirectory testrunner
 script:
-- xbuild ./MediaManager.sln
-- mono ./packages/xunit.runner.console*/tools/xunit.console.exe ./MediaManager.Tests/bin/Debug/MediaManager.Tests.dll
+  - msbuild /p:Configuration=Release MediaManager.sln
+  - mono ./testrunner/NUnit.ConsoleRunner.3.10.1/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/MediaManager.Tests.dll
