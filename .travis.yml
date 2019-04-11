@@ -1,8 +1,9 @@
 language: csharp
-solution: MediaManager.sln
+dist: trusty
+mono: none
+dotnet: 4.6.1
 install:
-  - nuget restore MediaManager.sln
-  - nuget install NUnit.Console -OutputDirectory testrunner
+  - dotnet restore
 script:
-  - dotnet build /p:Configuration=Release MediaManager.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/netcoreapp2.1/MediaManager.Tests.dll
+  - dotnet build
+  - dotnet test MediaManager.Tests/MediaManager.Tests.csproj
