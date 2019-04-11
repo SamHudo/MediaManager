@@ -2,7 +2,7 @@ language: csharp
 solution: MediaManager.sln
 install:
   - nuget restore MediaManager.sln
-  - nuget install NUnit.Console -Version 3.10.1 -OutputDirectory testrunner
+  - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
 script:
   - msbuild /p:Configuration=Release MediaManager.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.10.1/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/MediaManager.Tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.9.0/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/MediaManager.Tests.dll
