@@ -1,8 +1,8 @@
 language: csharp
 solution: MediaManager.sln
-install:
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
   - nuget restore MediaManager.sln
-  - nuget install NUnit.Console -OutputDirectory testrunner
-script:
-  - msbuild /p:Configuration=Release MediaManager.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MediaManager.Tests/bin/Release/netcoreapp2.1/MediaManager.Tests.dll
+after_script:
+  - nunit-console MediaManager.Tests/bin/Release/netcoreapp2.1/MediaManager.Tests.dll
