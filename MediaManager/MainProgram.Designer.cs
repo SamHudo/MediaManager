@@ -33,16 +33,17 @@
             this.addLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treeView1 = new System.Windows.Forms.TreeView();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.TreeView = new System.Windows.Forms.TreeView();
+            this.MediaListView = new System.Windows.Forms.ListView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.FileArtPictureBox = new System.Windows.Forms.PictureBox();
+            this.FileInfolbl = new System.Windows.Forms.Label();
+            this.PlayListView = new System.Windows.Forms.ListView();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FileArtPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -84,29 +85,29 @@
             this.optionsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.optionsToolStripMenuItem.Text = "Options";
             // 
-            // treeView1
+            // TreeView
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 31);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(215, 548);
-            this.treeView1.TabIndex = 1;
+            this.TreeView.Location = new System.Drawing.Point(12, 31);
+            this.TreeView.Name = "TreeView";
+            this.TreeView.Size = new System.Drawing.Size(215, 548);
+            this.TreeView.TabIndex = 1;
             // 
-            // listView1
+            // MediaListView
             // 
-            this.listView1.AllowColumnReorder = true;
-            this.listView1.CheckBoxes = true;
-            this.listView1.Location = new System.Drawing.Point(234, 31);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(744, 548);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.MediaListView.AllowColumnReorder = true;
+            this.MediaListView.CheckBoxes = true;
+            this.MediaListView.Location = new System.Drawing.Point(234, 31);
+            this.MediaListView.Name = "MediaListView";
+            this.MediaListView.Size = new System.Drawing.Size(744, 548);
+            this.MediaListView.TabIndex = 2;
+            this.MediaListView.UseCompatibleStateImageBehavior = false;
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripProgressBar1});
+            this.toolStripStatusLabel,
+            this.toolStripProgressBar});
             this.statusStrip1.Location = new System.Drawing.Point(0, 732);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -114,44 +115,53 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusLabel
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(151, 20);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(56, 20);
+            this.toolStripStatusLabel.Text = "Status: ";
             // 
-            // toolStripProgressBar1
+            // toolStripProgressBar
             // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 19);
+            this.toolStripProgressBar.Name = "toolStripProgressBar";
+            this.toolStripProgressBar.Size = new System.Drawing.Size(100, 19);
             // 
-            // listBox1
+            // FileArtPictureBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(984, 31);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(249, 548);
-            this.listBox1.TabIndex = 4;
+            this.FileArtPictureBox.Location = new System.Drawing.Point(12, 586);
+            this.FileArtPictureBox.Name = "FileArtPictureBox";
+            this.FileArtPictureBox.Size = new System.Drawing.Size(152, 143);
+            this.FileArtPictureBox.TabIndex = 5;
+            this.FileArtPictureBox.TabStop = false;
             // 
-            // pictureBox1
+            // FileInfolbl
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 586);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 143);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.FileInfolbl.AutoSize = true;
+            this.FileInfolbl.Location = new System.Drawing.Point(171, 586);
+            this.FileInfolbl.Name = "FileInfolbl";
+            this.FileInfolbl.Size = new System.Drawing.Size(111, 17);
+            this.FileInfolbl.TabIndex = 6;
+            this.FileInfolbl.Text = "No File Selected";
+            // 
+            // PlayListView
+            // 
+            this.PlayListView.Location = new System.Drawing.Point(985, 31);
+            this.PlayListView.Name = "PlayListView";
+            this.PlayListView.Size = new System.Drawing.Size(245, 548);
+            this.PlayListView.TabIndex = 7;
+            this.PlayListView.UseCompatibleStateImageBehavior = false;
             // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1242, 757);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.PlayListView);
+            this.Controls.Add(this.FileInfolbl);
+            this.Controls.Add(this.FileArtPictureBox);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.MediaListView);
+            this.Controls.Add(this.TreeView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainProgram";
@@ -160,7 +170,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FileArtPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,12 +183,13 @@
         private System.Windows.Forms.ToolStripMenuItem addLocationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
-        private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.TreeView TreeView;
+        private System.Windows.Forms.ListView MediaListView;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar;
+        private System.Windows.Forms.PictureBox FileArtPictureBox;
+        private System.Windows.Forms.Label FileInfolbl;
+        private System.Windows.Forms.ListView PlayListView;
     }
 }
