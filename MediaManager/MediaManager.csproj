@@ -67,6 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Details\MediaFiles.cs" />
+    <Compile Include="Details\Music.cs" />
+    <Compile Include="Details\Video.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="MainProgram.cs">
       <SubType>Form</SubType>
@@ -80,6 +83,7 @@
     <Compile Include="InitalLoader.Designer.cs">
       <DependentUpon>InitalLoader.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagerSettings.cs" />
     <Compile Include="ManagerSettings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>

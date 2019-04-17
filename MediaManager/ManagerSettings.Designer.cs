@@ -22,5 +22,89 @@ namespace MediaManager {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("*.wav,*.mp3,*.wma,*.ogg,*.midi,*.aif,*.aifc,*.aiff,*.au,*.ea")]
+        public string MusicFileExt {
+            get {
+                return ((string)(this["MusicFileExt"]));
+            }
+            set {
+                this["MusicFileExt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("*.avi,*.flv,*.wmv,*.mov,*.mp4")]
+        public string VideoFileExt {
+            get {
+                return ((string)(this["VideoFileExt"]));
+            }
+            set {
+                this["VideoFileExt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string OtherFileExt {
+            get {
+                return ((string)(this["OtherFileExt"]));
+            }
+            set {
+                this["OtherFileExt"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Music\r\nC:\\Users\\Public\\Videos")]
+        public string FileLocations {
+            get {
+                return ((string)(this["FileLocations"]));
+            }
+            set {
+                this["FileLocations"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("TrackNumber,Title,Artist,Album")]
+        public string OrderOfMusic {
+            get {
+                return ((string)(this["OrderOfMusic"]));
+            }
+            set {
+                this["OrderOfMusic"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Title,Director")]
+        public string OrderOfVideo {
+            get {
+                return ((string)(this["OrderOfVideo"]));
+            }
+            set {
+                this["OrderOfVideo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Title,Path,Size")]
+        public string OrderOfOther {
+            get {
+                return ((string)(this["OrderOfOther"]));
+            }
+            set {
+                this["OrderOfOther"] = value;
+            }
+        }
     }
 }
