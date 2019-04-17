@@ -12,8 +12,7 @@ namespace MediaManager
     {
         public FileManager(String path)
         {
-            var file = ShellFile.FromFilePath(path);
-            
+            var file = ShellFile.FromFilePath(path);            
         }
     }
 }
