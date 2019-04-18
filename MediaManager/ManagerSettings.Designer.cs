@@ -61,7 +61,7 @@ namespace MediaManager {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\Public\\Music\r\nC:\\Users\\Public\\Videos")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\Public\\\\Music")]
         public string FileLocations {
             get {
                 return ((string)(this["FileLocations"]));

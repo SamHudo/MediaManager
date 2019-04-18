@@ -8,7 +8,7 @@ using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 
 namespace MediaManager.Details
 {
-    class Video : MediaFiles
+    public class Video : MediaFiles
     {
         public Video(string file): base(file)
         {

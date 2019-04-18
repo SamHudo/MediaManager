@@ -12,9 +12,23 @@ namespace MediaManager
 {
     public partial class MainProgram : Form
     {
-        public MainProgram()
+        private FileManager t1;
+        public MainProgram(FileManager t1)
         {
+            this.t1 = t1;
             InitializeComponent();
+        }
+
+        private void MainProgram_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(System.Windows.Forms.Application.MessageLoop)
+            {                
+                System.Windows.Forms.Application.Exit();
+            }
+            else
+            {                
+                System.Environment.Exit(1);
+            }
         }
     }
 }

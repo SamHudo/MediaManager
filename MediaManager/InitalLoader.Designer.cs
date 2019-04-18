@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.InitalProgressBar = new System.Windows.Forms.ProgressBar();
             this.Progresslbl = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BackboneWorker = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // InitalProgressBar
             // 
-            this.InitalProgressBar.Location = new System.Drawing.Point(12, 83);
+            this.InitalProgressBar.Location = new System.Drawing.Point(12, 12);
             this.InitalProgressBar.Name = "InitalProgressBar";
             this.InitalProgressBar.Size = new System.Drawing.Size(776, 48);
             this.InitalProgressBar.TabIndex = 0;
@@ -44,15 +43,17 @@
             // Progresslbl
             // 
             this.Progresslbl.AutoSize = true;
-            this.Progresslbl.Location = new System.Drawing.Point(12, 134);
+            this.Progresslbl.Location = new System.Drawing.Point(12, 63);
             this.Progresslbl.Name = "Progresslbl";
             this.Progresslbl.Size = new System.Drawing.Size(28, 17);
             this.Progresslbl.TabIndex = 1;
             this.Progresslbl.Text = "0%";
             // 
-            // timer1
+            // BackboneWorker
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.BackboneWorker.WorkerReportsProgress = true;
+            this.BackboneWorker.WorkerSupportsCancellation = true;
+            this.BackboneWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackboneWorker_DoWork);
             // 
             // InitalLoader
             // 
@@ -71,7 +72,7 @@
         #endregion
         private System.Windows.Forms.ProgressBar InitalProgressBar;
         private System.Windows.Forms.Label Progresslbl;
-        private System.Windows.Forms.Timer timer1;
+        public System.ComponentModel.BackgroundWorker BackboneWorker;
     }
 }
 

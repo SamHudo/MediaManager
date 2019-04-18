@@ -12,8 +12,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="FileLocations" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Users\Public\Music
-C:\Users\Public\Videos</Value>
+      <Value Profile="(Default)">C:\\Users\\Public\\Music</Value>
     </Setting>
     <Setting Name="OrderOfMusic" Type="System.String" Scope="User">
       <Value Profile="(Default)">TrackNumber,Title,Artist,Album</Value>

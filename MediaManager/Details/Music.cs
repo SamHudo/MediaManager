@@ -8,7 +8,7 @@ using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 
 namespace MediaManager.Details
 {
-    class Music : MediaFiles
+    public class Music : MediaFiles
     {
         public Music(string path): base(path)
         {

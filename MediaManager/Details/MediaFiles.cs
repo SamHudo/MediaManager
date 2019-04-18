@@ -9,7 +9,7 @@ using Microsoft.WindowsAPICodePack.Shell.PropertySystem;
 
 namespace MediaManager.Details
 {
-    class MediaFiles
+    public class MediaFiles
     {
         public ShellFile file;
 

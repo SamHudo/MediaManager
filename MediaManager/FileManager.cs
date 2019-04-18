@@ -6,44 +6,81 @@ using System.Threading.Tasks;
 using MediaManager.Details;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.ComponentModel;
 
 namespace MediaManager
 {
-    class FileManager
+    public class FileManager
     {
         public List<MediaFiles> MediaFiles { get; set; }
         public List<Music> MusicFiles { get; set; }
         public List<Video> VideoFiles { get; set; }
 
-        public void ScanFileLocations()
+        public FileManager()
         {
-            foreach (var file in FileLocations)
+            MediaFiles = new List<MediaFiles>();
+            MusicFiles = new List<Music>();
+            VideoFiles = new List<Video>();
+        }
+
+
+        public void ScanFileLocations(BackgroundWorker worker, DoWorkEventArgs e)
+        {
+            if (worker.CancellationPending)
             {
-                foreach (var ext in MusicExt)
+                e.Cancel = true;
+            }
+            else
+            {
+                try
                 {
-                    string[] filePaths = Directory.GetFiles(file, ext, SearchOption.AllDirectories);
-                    foreach (var files in filePaths)
+                    int highestPercentageReached = 0;
+                    foreach (var file in FileLocations)
                     {
-                        MusicFiles.Add(new Music(files));
+                        int percentComplete = (int)((float)Array.IndexOf(FileLocations, file) / (float)Array.LastIndexOf(FileLocations, file) * 100);
+                        if (percentComplete > highestPercentageReached)
+                        {
+                            highestPercentageReached = percentComplete;
+                            worker.ReportProgress(percentComplete);
+                        }
+                        foreach (var ext in MusicExt)
+                        {
+
+                            string[] filePaths = Directory.GetFiles(file, ext, SearchOption.AllDirectories);
+                            foreach (var files in filePaths)
+                            {
+                                MusicFiles.Add(new Music(files));
+
+                            }
+                        }
+                        foreach (var ext in VideoExt)
+                        {
+
+                            string[] filePaths = Directory.GetFiles(file, ext, SearchOption.AllDirectories);
+                            foreach (var files in filePaths)
+                            {
+                                VideoFiles.Add(new Video(files));
+
+                            }
+                        }
+                        foreach (var ext in OtherExt)
+                        {
+
+                            string[] filePaths = Directory.GetFiles(file, ext, SearchOption.AllDirectories);
+                            foreach (var files in filePaths)
+                            {
+                                MediaFiles.Add(new MediaFiles(files));
+
+                            }
+                        }
                     }
                 }
-                foreach (var ext in VideoExt)
+                catch (Exception exc)
                 {
-                    string[] filePaths = Directory.GetFiles(file, ext, SearchOption.AllDirectories);
-                    foreach (var files in filePaths)
-                    {
-                        VideoFiles.Add(new Video(files));
-                    }
-                }
-                foreach (var ext in OtherExt)
-                {
-                    string[] filePaths = Directory.GetFiles(file, ext, SearchOption.AllDirectories);
-                    foreach (var files in filePaths)
-                    {
-                        MediaFiles.Add(new MediaFiles(files));
-                    }
+                    throw new ArgumentException(exc.ToString());
                 }
             }
+
         }
 
         public string[] MusicExt {
