@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MediaManager" GeneratedClassName="ManagerSettings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MusicFileExt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*.wav,*.mp3,*.wma,*.ogg,*.midi,*.aif,*.aifc,*.aiff,*.au,*.ea</Value>
+    </Setting>
+    <Setting Name="VideoFileExt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*.avi,*.flv,*.wmv,*.mov,*.mp4</Value>
+    </Setting>
+    <Setting Name="OtherFileExt" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FileLocations" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\Users\\Public\\Music</Value>
+    </Setting>
+    <Setting Name="OrderOfMusic" Type="System.String" Scope="User">
+      <Value Profile="(Default)">TrackNumber,Title,Artist,Album</Value>
+    </Setting>
+    <Setting Name="OrderOfVideo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Title,Director</Value>
+    </Setting>
+    <Setting Name="OrderOfOther" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Title,Path,Size</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
