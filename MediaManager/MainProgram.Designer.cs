@@ -41,6 +41,7 @@
             this.FileArtPictureBox = new System.Windows.Forms.PictureBox();
             this.FileInfolbl = new System.Windows.Forms.Label();
             this.PlayListView = new System.Windows.Forms.ListView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileArtPictureBox)).BeginInit();
@@ -165,7 +166,6 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainProgram";
-            this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainProgram_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -192,5 +192,6 @@
         private System.Windows.Forms.PictureBox FileArtPictureBox;
         private System.Windows.Forms.Label FileInfolbl;
         private System.Windows.Forms.ListView PlayListView;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
