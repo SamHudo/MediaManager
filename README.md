@@ -1,4 +1,4 @@
-# MediaManager [![Build status](https://ci.appveyor.com/api/projects/status/634patk0t1n0q3pp?svg=true)](https://ci.appveyor.com/project/NinjaMiellies/mediamanager) 
+# MediaManager 
 QA Synoptic project completed over a week with a weeks advance prep. This Media Manager organises media in a viewable manner, allows creation of playlists and categorisation. 
 
 # Background information
@@ -19,8 +19,6 @@ QA Synoptic project completed over a week with a weeks advance prep. This Media 
 # Conceptual model
 The UML model below shows the main concepts required by the application and their relationships. Data held in the memory of the organiser, and data loaded and saved by the organiser, should correspond to this conceptual model.
 
-![UML Diagram](docs/UMLdiagram.png)
-
 - Each MediaFile has a name which is a valid filename (such as “Moonlight Sonata”), a file path (such as “D:\Data\Music\”), a file type (such as “MP3”), and a comment.
 - Each MediaFile may be associated with zero or more Categories, each of which is named by a string (such as “Classical”).
 - Each MediaFile may be related to zero or one Image, where an Image has a filename and a file path.
@@ -28,8 +26,6 @@ The UML model below shows the main concepts required by the application and thei
 
 # Use Case Model
 The UML Use Case model below shows the interactions that a user may have with the media organiser.
-
-![UML Diagram](docs/UMLCaseModel.png)
 
 ### Specify scope:
 - Specify file paths of interest, i.e. the locations in the filing system where the organiser will look for MediaFiles.
